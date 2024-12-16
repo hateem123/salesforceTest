@@ -71,7 +71,9 @@ public class AccountTriggerHandler {
         }
         update cntMap.values();
         //callout a future method to synch
-        ApiIntegration.sendPatchCallout(cntIdCalloutAPI);
+        if(cntIdCalloutAPI.size() > 0){
+        	ApiIntegration.sendPatchCallout(cntIdCalloutAPI);
+        }
         
         
         
